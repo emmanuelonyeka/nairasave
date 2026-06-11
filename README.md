@@ -210,15 +210,13 @@ The design aesthetic targets **Wise × Chipper Cash** — a premium, trustworthy
 |---|---|---|
 | _screenshot_ | _screenshot_ | _screenshot_ |
 
----
+---## 
+👤 Team Members
 
-## 👤 Team Member 
-Adaeze Nwachukwu
-Ajayi Akinola
-Mekowulu Sylvanus Nnamdi
-Emmanuel Onyekachi
-
-
+* **Adaeze Nwachukwu** – Team Lead
+* **Ajayi Akinola**
+* **Emmanuel Onyekachi**
+* **Mekowulu Sylvanus Nnamdi**
 ---
 
 ## 📄 License
