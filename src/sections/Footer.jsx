@@ -10,7 +10,6 @@ const footerLinks = {
   ],
   Company: [
     { label: 'How It Works', href: '#how-it-works' },
-    { label: 'Testimonials', href: '#testimonials' },
     { label: 'FAQ', href: '#faq' },
     { label: 'Join Waitlist', href: '#waitlist' },
   ],
@@ -19,7 +18,7 @@ const footerLinks = {
 export default function Footer() {
   return (
     <footer
-      className="bg-secondary dark:bg-secondary border-t border-secondary-800"
+      className="bg-gray-50 dark:bg-secondary border-t border-gray-500 dark:border-secondary-800"
       aria-label="Site footer"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-8">
@@ -28,15 +27,17 @@ export default function Footer() {
           <div className="sm:col-span-2">
             <a
               href="#"
-              className="inline-flex items-center gap-2 font-display font-bold text-xl text-white mb-4 focus:outline-none focus:ring-2 focus:ring-primary rounded-lg"
+              className="inline-flex items-center gap-2 font-display font-bold text-xl text-secondary-700 dark:text-white mb-4 focus:outline-none focus:ring-2 focus:ring-primary rounded-lg"
               aria-label="NairaSave home"
             >
               <span className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white font-bold text-sm">
-                N$
-              </span>
-              Naira<span className="text-primary">Save</span>
+            N$
+          </span>
+          <span>
+            Naira<span className="text-primary">Save</span>
+          </span>
             </a>
-            <p className="text-sm text-gray-400 leading-relaxed max-w-xs mb-5">
+            <p className="text-sm text-secondary-700 dark:text-gray-400 leading-relaxed max-w-xs mb-5">
               The smart way for Nigerians to save in USD, beat inflation, and build lasting wealth—one dollar at a time.
             </p>
             {/* Social links */}
@@ -51,7 +52,7 @@ export default function Footer() {
                   key={label}
                   href={href}
                   aria-label={label}
-                  className="w-9 h-9 rounded-lg bg-secondary-800 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary"
+                  className="w-9 h-9 rounded-lg  dark:bg-secondary-800 flex items-center justify-center text-secondary-700 hover:bg-secondary-800 hover:text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary"
                 >
                   <Icon className="w-4 h-4" aria-hidden="true" />
                 </a>
@@ -62,7 +63,7 @@ export default function Footer() {
           {/* Link columns */}
           {Object.entries(footerLinks).map(([heading, links]) => (
             <nav key={heading} aria-label={`${heading} links`}>
-              <h3 className="text-white font-semibold text-sm mb-4">{heading}</h3>
+              <h3 className="text-secondary-800 dark:text-white font-semibold text-sm mb-4">{heading}</h3>
               <ul className="space-y-2.5" role="list">
                 {links.map((link) => (
                   <li key={link}>
@@ -72,7 +73,7 @@ export default function Footer() {
                         e.preventDefault()
                         document.querySelector(link.href)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
                       }}
-                      className="text-sm text-gray-400 hover:text-primary transition-colors duration-150 focus:outline-none focus:underline focus:text-primary"
+                      className="text-sm text-secondary-700 dark:text-gray-400 hover:text-primary transition-colors duration-150 focus:outline-none focus:underline focus:text-primary"
                     >
                       {link.label}
                     </a>
@@ -84,11 +85,11 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-secondary-800 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-gray-500">
+          <p className="text-xs text-secondary-700 dark:text-gray-500">
             © {new Date().getFullYear()} NairaSave. All rights reserved. NairaSave is not yet a licensed financial institution.
           </p>
           <p className="text-xs text-gray-600">
-            Built by <span className="text-gray-500 font-medium">Team Guru</span> · NTTS 2026
+            Built by <span className="text-secondary-700 dark:text-gray-500 font-medium">Team Guru</span> · NTTS 2026
           </p>
         </div>
       </div>

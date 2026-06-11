@@ -17,9 +17,9 @@ export default function Benefits() {
           {/* Left: Stats card */}
           <FadeUp>
           <div className="relative px-2 sm:px-0 pb-8 sm:pb-0">
-              <div className="bg-secondary dark:bg-secondary-800 rounded-3xl p-6 sm:p-8 text-white">
-                <p className="text-sm font-medium text-gray-400 mb-2">Naira vs Dollar — 5 Years</p>
-                <h3 className="text-2xl font-display font-bold text-white mb-6">
+              <div className="bg-gray-200 dark:bg-secondary-800 rounded-3xl p-6 sm:p-8 text-gray-500 dark:text-white">
+                <p className="text-sm font-medium text-gray-900 mb-2">Naira vs Dollar — 5 Years</p>
+                <h3 className="text-2xl font-display text-gray-500 font-bold dark:text-white mb-6">
                   The Naira lost{' '}
                   <span className="text-red-400">70%</span> of its value.
                   <br />
@@ -31,10 +31,10 @@ export default function Benefits() {
                 <div className="space-y-4">
                   <div>
                     <div className="flex justify-between text-sm mb-1">
-                      <span className="text-gray-400">NGN Savings (₦1M in 2019)</span>
+                      <span className="text-secondary-800 dark:text-gray-400">NGN Savings (₦1M in 2019)</span>
                       <span className="text-red-400 font-semibold">₦290K value today</span>
                     </div>
-                    <div className="h-3 bg-secondary-700 dark:bg-secondary-700 rounded-full overflow-hidden">
+                    <div className="h-3 bg-gray-400 dark:bg-secondary-700 rounded-full overflow-hidden">
                       <FadeUp>
                         <div className="h-full w-[29%] bg-red-400 rounded-full" />
                       </FadeUp>
@@ -42,10 +42,10 @@ export default function Benefits() {
                   </div>
                   <div>
                     <div className="flex justify-between text-sm mb-1">
-                      <span className="text-gray-400">USD Savings ($645 in 2019)</span>
+                      <span className="text-secondary-800 dark:text-gray-400">USD Savings ($645 in 2019)</span>
                       <span className="text-primary font-semibold">₦999,750 value today</span>
                     </div>
-                    <div className="h-3 bg-secondary-700 dark:bg-secondary-700 rounded-full overflow-hidden">
+                    <div className="h-3 bg-gray-400 dark:bg-secondary-700 rounded-full overflow-hidden">
                       <FadeUp delay={0.1}>
                         <div className="h-full w-[100%] bg-primary rounded-full" />
                       </FadeUp>
@@ -60,11 +60,11 @@ export default function Benefits() {
 
               {/* Floating badge */}
               <div
-                className="absolute -bottom-6 right-4 sm:-bottom-4 sm:right-4 bg-primary rounded-2xl px-4 py-2.5 shadow-xl z-10"
+                className="absolute -bottom-6right-4 sm:-bottom-8 sm:right-4 bg-secondary-700 dark:bg-primary rounded-2xl px-4 py-2.5 shadow-xl z-10"
                 aria-hidden="true"
               >
-                <p className="text-xs text-white/70">If you had saved in USD</p>
-                <p className="text-lg font-display font-bold text-white">+244% preserved</p>
+                <p className="text-xs text-gray-300 dark:text-white/70">If you had saved in USD</p>
+                <p className="text-lg font-display font-bold text-gray-300 dark:text-white">+244% preserved</p>
               </div>
             </div>
           </FadeUp>

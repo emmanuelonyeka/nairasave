@@ -32,7 +32,7 @@ export default function Waitlist() {
     <section
       id="waitlist"
       aria-labelledby="waitlist-heading"
-      className="py-20 lg:py-28 bg-gradient-to-br from-secondary via-secondary-800 to-secondary relative overflow-hidden"
+      className="py-20 lg:py-28 bg-gray-100 dark:bg-gradient-to-br from-secondary via-secondary-800 to-secondary relative overflow-hidden"
     >
       {/* Background glow */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
@@ -48,13 +48,13 @@ export default function Waitlist() {
 
           <h2
             id="waitlist-heading"
-            className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-white mb-4 leading-tight"
+            className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-gray-400 dark:text-white mb-4 leading-tight"
           >
             Ready to Start{' '}
             <span className="text-primary">Saving Smarter?</span>
           </h2>
 
-          <p className="text-gray-400 text-lg mb-8 max-w-md mx-auto">
+          <p className="dark:text-gray-400  text-gray-600 text-lg mb-8 max-w-md mx-auto">
             Join 2,400+ Nigerians on the waitlist. Early members get priority access and a 3-month fee waiver.
           </p>
 
@@ -77,7 +77,7 @@ export default function Waitlist() {
               </motion.div>
               <div className="text-center">
                 <p className="text-xl font-display font-bold text-white mb-1">You're on the list!</p>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="dark:text-gray-400 text-secondary-700 text-sm leading-relaxed">
                   We'll notify <strong className="text-primary">{email}</strong> the moment we launch.
                 </p>
               </div>
@@ -107,7 +107,7 @@ export default function Waitlist() {
                     }}
                     aria-describedby={error ? 'email-error' : undefined}
                     aria-invalid={error ? 'true' : 'false'}
-                    className={`w-full px-4 py-3.5 rounded-xl bg-white/10 border text-white placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-primary transition-colors ${
+                    className={`w-full px-4 py-3.5 rounded-xl bg-gray-400 placeholder-gray-100 dark:bg-white/10 border-primary dark:text-white dark:placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-primary transition-colors ${
                       error ? 'border-red-400' : 'border-white/10 focus:border-primary'
                     }`}
                   />
@@ -144,7 +144,7 @@ export default function Waitlist() {
           </AnimatePresence>
 
           {!submitted && (
-            <p className="mt-4 text-xs text-gray-500">
+            <p className="mt-4 text-xs text-secondary dark:text-gray-500">
               No spam. No credit card. Unsubscribe anytime.
             </p>
           )}

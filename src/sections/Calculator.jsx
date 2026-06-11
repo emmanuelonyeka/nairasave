@@ -226,11 +226,11 @@ export default function Calculator() {
               {/* NGN Output */}
               <div
                 id="calculator-result"
-                className="bg-gradient-to-br from-secondary to-secondary-800 dark:from-secondary-700 dark:to-secondary rounded-2xl p-6"
+                className="bg-gradient-to-br from-gary-300 to-gray-500 dark:from-secondary-700 dark:to-secondary rounded-2xl p-6"
                 aria-live="polite"
                 aria-atomic="true"
               >
-                <p className="text-xs text-gray-400 mb-2 font-medium">
+                <p className="text-xs text-gray-600 dark:text-gray-400 mb-2 font-medium">
                   {isUsdToNgn ? 'Naira Equivalent' : 'Dollar Equivalent'}
                 </p>
                 <AnimatePresence mode="wait">
@@ -261,7 +261,7 @@ export default function Calculator() {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.15 }}
                     >
-                      <p className="text-2xl sm:text-4xl font-display font-extrabold text-white leading-tight">
+                      <p className="text-2xl sm:text-4xl font-display font-extrabold text-gray-500 dark:text-white leading-tight">
                         {isUsdToNgn ? formatNGN(ngnAmount) : formatUSD(ngnAmount)}
                       </p>
                       <p className="text-sm text-gray-400 mt-2">
@@ -277,7 +277,7 @@ export default function Calculator() {
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                     >
-                      <p className="text-2xl sm:text-4xl font-display font-extrabold text-gray-500">
+                      <p className="text-2xl sm:text-4xl font-display font-extrabold text-gray-600 dark:text-gray-500">
                         {isUsdToNgn ? '₦0.00' : '$0.00'}
                       </p>
                       <p className="text-sm text-gray-500 mt-2">Enter an amount above to see the conversion</p>
@@ -289,9 +289,9 @@ export default function Calculator() {
               {/* Rate info */}
               <p
                 id="calculator-rate-info"
-                className="flex items-start gap-1.5 text-xs text-gray-400 dark:text-gray-500 mt-4"
+                className="flex items-start gap-1.5 text-xs text-gray-600 dark:text-gray-400 mt-4"
               >
-                <HiInformationCircle className="w-4 h-4 flex-shrink-0 mt-0.5" aria-hidden="true" />
+                <HiInformationCircle className="w-4 h-4 flex-shrink-0 mt-0.5 text-gray-00" aria-hidden="true" />
                 Rate: 1 USD = ₦{USD_TO_NGN.toLocaleString()} (parallel market, hardcoded for this demo).
                 Actual rates update throughout the day in the live app.
               </p>

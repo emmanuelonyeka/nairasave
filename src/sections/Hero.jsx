@@ -85,10 +85,10 @@ function DashboardCard() {
         </div>
 
         {/* NGN Equivalent */}
-        <div className="bg-secondary dark:bg-secondary-700 rounded-xl p-3 mb-4">
-          <p className="text-xs text-gray-400 mb-0.5">Naira Equivalent</p>
-          <p className="text-lg font-display font-bold text-white">₦3,797,500</p>
-          <p className="text-xs text-gray-400 mt-0.5">@ ₦1,550 / $1</p>
+        <div className="bg-gray-200 dark:bg-secondary-700 rounded-xl p-3 mb-4">
+          <p className="text-xs text-gray-600 dark:text-gray-400 mb-0.5">Naira Equivalent</p>
+          <p className="text-lg font-display font-bold text-gray-600 dark:text-white">₦3,797,500</p>
+          <p className="text-xs text-gray-600 dark:text-gray-400 mt-0.5">@ ₦1,550 / $1</p>
         </div>
 
         {/* Mini chart */}
@@ -119,7 +119,7 @@ function DashboardCard() {
         initial={{ opacity: 0, x: 20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 1.1, duration: 0.4 }}
-        className="absolute -top-4 -right-4 bg-white dark:bg-secondary-800 border border-gray-100 dark:border-secondary-700 rounded-xl px-3 py-2 shadow-lg"
+        className="absolute -top-6 -right-4 bg-white dark:bg-secondary-800 border border-gray-100 dark:border-secondary-700 rounded-xl px-3 py-2 shadow-lg"
         aria-hidden="true"
       >
         <div className="flex items-center gap-2">

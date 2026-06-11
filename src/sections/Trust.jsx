@@ -15,18 +15,18 @@ export default function Trust() {
     <section
       id="trust"
       aria-labelledby="trust-heading"
-      className="py-16 lg:py-20 bg-secondary dark:bg-secondary-800"
+      className="py-16 lg:py-20 bg-white dark:bg-secondary-800"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeUp className="text-center mb-12">
           <SectionLabel>Why NairaSave</SectionLabel>
           <h2
             id="trust-heading"
-            className="mt-4 text-3xl sm:text-4xl font-display font-bold text-white"
+            className="mt-4 text-3xl sm:text-4xl font-display font-bold dark:text-white"
           >
             Built on trust, engineered for Nigerians
           </h2>
-          <p className="mt-3 text-gray-400 max-w-xl mx-auto">
+          <p className="mt-3 dark:text-gray-400 max-w-xl mx-auto">
             Every feature is designed with the Nigerian financial reality in mind, so you can save confidently.
           </p>
         </FadeUp>
@@ -36,12 +36,12 @@ export default function Trust() {
             const Icon = iconMap[point.icon]
             return (
               <FadeUp key={point.title} delay={i * 0.1}>
-                <div className="bg-secondary-800 dark:bg-secondary/50 border border-secondary-700 dark:border-secondary-700 rounded-2xl p-6 h-full hover:border-primary/40 hover:-translate-y-2 hover:shadow-xl hover:shadow-black/40 transition-all duration-300">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                    <Icon className="w-6 h-6 text-primary" aria-hidden="true" />
+                <div className="bg-gray-100 dark:bg-secondary/50 border border-primary dark:border-secondary-700 rounded-2xl p-6 h-full hover:border-primary/40 hover:-translate-y-2 hover:shadow-xl hover:shadow-black/40 transition-all duration-300">
+                  <div className="w-12 h-12 rounded-xl bg-primary dark:bg-primary/10 flex items-center justify-center mb-4">
+                    <Icon className="w-6 h-6 text-white dark:text-primary" aria-hidden="true" />
                   </div>
-                  <h3 className="font-display font-semibold text-white mb-2">{point.title}</h3>
-                  <p className="text-sm text-gray-400 leading-relaxed">{point.text}</p>
+                  <h3 className="font-display font-semibold text-gray-600 dark:text-white mb-2">{point.title}</h3>
+                  <p className="text-sm dark:text-gray-400 text-gray-500 leading-relaxed">{point.text}</p>
                 </div>
               </FadeUp>
             )

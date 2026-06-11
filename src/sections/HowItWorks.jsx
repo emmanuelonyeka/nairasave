@@ -34,7 +34,7 @@ export default function HowItWorks() {
             <FadeUp key={step.number} delay={i * 0.15}>
               <div className="relative text-center bg-white dark:bg-secondary rounded-2xl p-8 border border-gray-100 dark:border-secondary-700 shadow-sm hover:shadow-md hover:border-primary/20 transition-all duration-300 z-10">
                 {/* Number badge */}
-                <div className="mx-auto w-14 h-14 rounded-2xl bg-secondary dark:bg-secondary-700 flex items-center justify-center mb-5 text-primary font-display font-bold text-xl">
+                <div className="mx-auto w-14 h-14 rounded-2xl bg-gray-300 dark:bg-secondary-700 flex items-center justify-center mb-5 text-primary dark:text-primary font-display font-bold text-xl">
                   {step.number}
                 </div>
                 <h3 className="font-display font-bold text-secondary dark:text-white text-lg mb-3">
