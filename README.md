@@ -217,6 +217,8 @@ The design aesthetic targets **Wise × Chipper Cash** — a premium, trustworthy
 * **Ajayi Akinola**
 * **Emmanuel Onyekachi**
 * **Mekowulu Sylvanus Nnamdi**
+* **Covenant Adekeye**
+* **Daniel lewis**
 ---
 
 ## 📄 License
