@@ -103,25 +103,12 @@ npm run build
 netlify deploy --dir=dist --prod
 ```
 
-Or connect the GitHub repository directly in the Netlify dashboard — it will auto-detect Vite and configure the build command.
-
-### Deploy to Vercel
-
-```bash
-# Install Vercel CLI
-npm install -g vercel
-
-# Deploy
-vercel --prod
-```
-
-Vercel auto-detects Vite projects. No additional configuration required.
 
 ### Deploy to GitHub Pages
 
 ```bash
 # Add homepage to package.json:
-# "homepage": "https://YOUR_USERNAME.github.io/nairasave"
+# "homepage": "https://github.com/emmanuelonyeka/nairasave"
 
 # Install gh-pages
 npm install --save-dev gh-pages
@@ -225,8 +212,11 @@ The design aesthetic targets **Wise × Chipper Cash** — a premium, trustworthy
 
 ---
 
-## 👤 Author
-
+## 👤 Team Member 
+Adaeze Nwachukwu
+Ajayi Akinola
+Mekowulu Sylvanus Nnamdi
+Emmanuel Onyekachi
 
 
 ---
@@ -235,4 +225,4 @@ The design aesthetic targets **Wise × Chipper Cash** — a premium, trustworthy
 
 This project was built as part of the **Nigerian Tech Talent Spotlight (NTTS) Week 1 Frontend Challenge**.
 
-© 2025 Emmanuel Onyeka. All rights reserved.
+© 2026 Team Gurus. All rights reserved.
