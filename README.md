@@ -220,6 +220,7 @@ The design aesthetic targets **Wise × Chipper Cash** — a premium, trustworthy
 * **Covenant Adekeye**
 * **Daniel lewis**
 * **Ibezim Chiemenam Clare**
+* **Adebisi Rachael**
 ---
 
 ## 📄 License
