@@ -6,6 +6,7 @@ import Button from '../components/Button'
 const navLinks = [
   { label: 'Features', href: '#features' },
   { label: 'Calculator', href: '#calculator' },
+  { label: 'Dashboard', href: '#dashboard' },
   { label: 'Benefits', href: '#benefits' },
   { label: 'FAQ', href: '#faq' },
 ]
@@ -23,13 +24,8 @@ export default function Navbar({ darkMode, setDarkMode }) {
   const handleNavClick = (e, href) => {
     e.preventDefault()
     setMenuOpen(false)
-    setTimeout(() => {
-      const el = document.querySelector(href)
-      if (el) {
-        const top = el.getBoundingClientRect().top + window.scrollY - 60
-        window.scrollTo({ top, behavior: 'smooth' })
-      }
-    }, 300)
+    const el = document.querySelector(href)
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
 
   return (
