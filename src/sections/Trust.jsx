@@ -36,11 +36,11 @@ export default function Trust() {
             const Icon = iconMap[point.icon]
             return (
               <FadeUp key={point.title} delay={i * 0.1}>
-                <div className="bg-gray-100 dark:bg-secondary/50 border border-primary dark:border-secondary-700 rounded-2xl p-6 h-full hover:border-primary/40 hover:-translate-y-2 hover:shadow-xl hover:shadow-black/40 transition-all duration-300">
-                  <div className="w-12 h-12 rounded-xl bg-primary dark:bg-primary/10 flex items-center justify-center mb-4">
-                    <Icon className="w-6 h-6 text-white dark:text-primary" aria-hidden="true" />
+                <div className="bg-gray-50 dark:bg-secondary/50 border border-gray-200/60 dark:border-secondary-700 rounded-2xl p-6 h-full hover:border-primary/40 hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 dark:bg-primary/10 flex items-center justify-center mb-4">
+                    <Icon className="w-6 h-6 text-primary dark:text-primary" aria-hidden="true" />
                   </div>
-                  <h3 className="font-display font-semibold text-gray-600 dark:text-white mb-2">{point.title}</h3>
+                  <h3 className="font-display font-semibold text-secondary dark:text-white mb-2">{point.title}</h3>
                   <p className="text-sm dark:text-gray-400 text-gray-500 leading-relaxed">{point.text}</p>
                 </div>
               </FadeUp>

@@ -107,8 +107,8 @@ export default function Waitlist() {
                     }}
                     aria-describedby={error ? 'email-error' : undefined}
                     aria-invalid={error ? 'true' : 'false'}
-                    className={`w-full px-4 py-3.5 rounded-xl bg-gray-400 placeholder-gray-100 dark:bg-white/10 border-primary dark:text-white dark:placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-primary transition-colors ${
-                      error ? 'border-red-400' : 'border-white/10 focus:border-primary'
+                    className={`w-full px-4 py-3.5 rounded-xl bg-gray-50 text-secondary border placeholder-gray-400 dark:bg-white/10 dark:text-white dark:placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-primary transition-colors ${
+                      error ? 'border-red-400' : 'border-gray-200 dark:border-white/10 focus:border-primary'
                     }`}
                   />
                   {error && (

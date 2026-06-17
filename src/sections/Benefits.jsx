@@ -60,7 +60,7 @@ export default function Benefits() {
 
               {/* Floating badge */}
               <div
-                className="absolute -bottom-6right-4 sm:-bottom-8 sm:right-4 bg-secondary-700 dark:bg-primary rounded-2xl px-4 py-2.5 shadow-xl z-10"
+                className="absolute -bottom-6 right-4 sm:-bottom-8 sm:right-4 bg-secondary-700 dark:bg-primary rounded-2xl px-4 py-2.5 shadow-xl z-10"
                 aria-hidden="true"
               >
                 <p className="text-xs text-gray-300 dark:text-white/70">If you had saved in USD</p>

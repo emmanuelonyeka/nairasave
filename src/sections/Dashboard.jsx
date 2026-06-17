@@ -249,13 +249,13 @@ export default function Dashboard() {
                     aria-live="polite"
                   >
                     <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-4">
-                      <span className="text-2xl" aria-hidden="true">📈</span>
+                      <span className="text-2xl" aria-hidden="true">{error ? '⚠️' : '📈'}</span>
                     </div>
                     <p className="text-base font-semibold text-secondary dark:text-white mb-1">
-                      Your projection will appear here
+                      {error ? 'Adjust your savings amount' : 'Enter an amount to see your savings grow'}
                     </p>
                     <p className="text-sm text-gray-400 max-w-xs">
-                      Enter a monthly savings amount on the left to see your 12-month growth in USD and Naira.
+                      {error ? error : 'Enter a monthly savings amount on the left to see your 12-month growth in USD and Naira.'}
                     </p>
                   </motion.div>
                 )}

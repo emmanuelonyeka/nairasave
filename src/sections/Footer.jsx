@@ -3,15 +3,15 @@ import { FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa'
 
 const footerLinks = {
   Product: [
-    { label: 'Features', href: '#features' },
-    { label: 'Calculator', href: '#calculator' },
-    { label: 'Security', href: '#trust' },
-    { label: 'Benefits', href: '#benefits' },
+    { label: 'features', href: '#features' },
+    { label: 'calculator', href: '#calculator' },
+    { label: 'security', href: '#trust' },
+    { label: 'benefits', href: '#benefits' },
   ],
   Company: [
-    { label: 'How It Works', href: '#how-it-works' },
-    { label: 'FAQ', href: '#faq' },
-    { label: 'Join Waitlist', href: '#waitlist' },
+    { label: 'how it works', href: '#how-it-works' },
+    { label: 'faq', href: '#faq' },
+    { label: 'join waitlist', href: '#waitlist' },
   ],
 }
 
@@ -52,7 +52,7 @@ export default function Footer() {
                   key={label}
                   href={href}
                   aria-label={label}
-                  className="w-9 h-9 rounded-lg  dark:bg-secondary-800 flex items-center justify-center text-secondary-700 hover:bg-secondary-800 hover:text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary"
+                  className="w-9 h-9 rounded-lg bg-gray-100 dark:bg-secondary-800 flex items-center justify-center text-secondary-700 dark:text-gray-300 hover:bg-primary hover:text-white dark:hover:bg-primary dark:hover:text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary"
                 >
                   <Icon className="w-4 h-4" aria-hidden="true" />
                 </a>
