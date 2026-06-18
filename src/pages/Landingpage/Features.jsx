@@ -1,7 +1,7 @@
 import { HiCreditCard, HiRefresh, HiTrendingUp, HiLightningBolt } from 'react-icons/hi'
-import FadeUp from '../components/FadeUp'
-import SectionLabel from '../components/SectionLabel'
-import { features } from '../data'
+import FadeUp from '../../components/FadeUp'
+import SectionLabel from '../../components/SectionLabel'
+import { features } from '../../data'
 
 const iconMap = {
   wallet: HiCreditCard,

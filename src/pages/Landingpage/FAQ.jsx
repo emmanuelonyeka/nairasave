@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { HiChevronDown } from 'react-icons/hi'
-import FadeUp from '../components/FadeUp'
-import SectionLabel from '../components/SectionLabel'
-import { faqs } from '../data'
+import FadeUp from '../../components/FadeUp'
+import SectionLabel from '../../components/SectionLabel'
+import { faqs } from '../../data'
 
 function FAQItem({ faq, isOpen, onToggle, index }) {
   return (

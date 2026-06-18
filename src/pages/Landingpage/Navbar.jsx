@@ -1,12 +1,13 @@
+import { useNavigate } from 'react-router-dom'
+
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { HiSun, HiMoon, HiMenuAlt3, HiX } from 'react-icons/hi'
-import Button from '../components/Button'
+import Button from '../../components/Button'
 
 const navLinks = [
   { label: 'Features', href: '#features' },
   { label: 'Calculator', href: '#calculator' },
-  { label: 'Dashboard', href: '#dashboard' },
   { label: 'Benefits', href: '#benefits' },
   { label: 'FAQ', href: '#faq' },
 ]
@@ -14,6 +15,7 @@ const navLinks = [
 export default function Navbar({ darkMode, setDarkMode }) {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const navigate = useNavigate()
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 16)
@@ -22,12 +24,24 @@ export default function Navbar({ darkMode, setDarkMode }) {
   }, [])
 
   const handleNavClick = (e, href) => {
-    e.preventDefault()
-    setMenuOpen(false)
-    const el = document.querySelector(href)
-    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-  }
+  e.preventDefault()
 
+  setMenuOpen(false)
+
+  setTimeout(() => {
+    const el = document.querySelector(href)
+
+    if(el){
+      el.scrollIntoView({
+        behavior:'smooth'
+      })
+    }
+  },100)
+} 
+
+   function handleDashboardButton () {
+    navigate('/dashboard')
+   }
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -86,9 +100,9 @@ export default function Navbar({ darkMode, setDarkMode }) {
           <div className="hidden md:block">
             <Button
               size="sm"
-              onClick={(e) => handleNavClick(e, '#waitlist')}
+              onClick={handleDashboardButton}
             >
-              Join Waitlist
+                Start Saving
             </Button>
           </div>
 
@@ -121,7 +135,7 @@ export default function Navbar({ darkMode, setDarkMode }) {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    onClick={(e) => handleNavClick(e, link.href)}
+                    onClick={(e) => {handleNavClick(e, link.href), setMenuOpen(false)}}
                     className="block px-4 py-3 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-primary-50 dark:hover:bg-primary/10 hover:text-primary transition-colors"
                   >
                     {link.label}
@@ -131,9 +145,9 @@ export default function Navbar({ darkMode, setDarkMode }) {
               <li className="pt-2 pb-1">
                 <Button
                   className="w-full"
-                  onClick={(e) => handleNavClick(e, '#waitlist')}
+                  onClick={handleDashboardButton}
                 >
-                  Join Waitlist
+                  Start Saving
                 </Button>
               </li>
             </ul>

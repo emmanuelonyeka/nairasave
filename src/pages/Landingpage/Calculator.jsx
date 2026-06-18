@@ -1,9 +1,9 @@
 import { useState, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { HiInformationCircle, HiX, HiSwitchVertical } from 'react-icons/hi'
-import FadeUp from '../components/FadeUp'
-import SectionLabel from '../components/SectionLabel'
-import { USD_TO_NGN } from '../data'
+import FadeUp from '../../components/FadeUp'
+import SectionLabel from '../../components/SectionLabel'
+import { USD_TO_NGN } from '../../data'
 
 function formatNGN(value) {
   return new Intl.NumberFormat('en-NG', {

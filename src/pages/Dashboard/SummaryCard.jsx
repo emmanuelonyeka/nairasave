@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { HiTrendingUp, HiCurrencyDollar, HiCash, HiCalendar } from 'react-icons/hi'
-import { formatNGN, formatUSD } from '../utils/projection'
+import { formatNGN, formatUSD } from '../../utils/projection'
 
 function StatCard({ icon: Icon, label, value, highlight, delay }) {
   return (

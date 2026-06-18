@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { HiArrowRight, HiTrendingUp } from 'react-icons/hi'
-import Button from '../components/Button'
+import Button from '../../components/Button'
 
 // Sparkline mini-chart built purely with SVG
 function MiniChart() {

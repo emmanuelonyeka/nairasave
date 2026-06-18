@@ -1,25 +1,52 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import Navbar from './sections/Navbar'
-import Hero from './sections/Hero'
-import Trust from './sections/Trust'
-import Features from './sections/Features'
-import Calculator from './sections/Calculator'
-import Dashboard from './sections/Dashboard'
-import Benefits from './sections/Benefits'
-import HowItWorks from './sections/HowItWorks'
-import FAQ from './sections/FAQ'
-import Waitlist from './sections/Waitlist'
-import Footer from './sections/Footer'
+
+import Navbar from './pages/Landingpage/Navbar'
+import Hero from './pages/Landingpage/Hero'
+import Trust from './pages/Landingpage/Trust'
+import Features from './pages/Landingpage/Features'
+import Calculator from './pages/Landingpage/Calculator'
+import Benefits from './pages/Landingpage/Benefits'
+import HowItWorks from './pages/Landingpage/HowItWorks'
+import FAQ from './pages/Landingpage/FAQ'
+import Waitlist from './pages/Landingpage/Waitlist'
+import Footer from './pages/Landingpage/Footer'
+
+import Dashboard from './pages/Dashboard/DashboardPage'
+
+function LandingPage({ darkMode, setDarkMode }) {
+  return (
+    <>
+      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+
+      <main id="main-content">
+        <Hero />
+        <Trust />
+        <Features />
+        <Calculator />
+        <Benefits />
+        <HowItWorks />
+        <FAQ />
+        <Waitlist />
+      </main>
+
+      <Footer />
+    </>
+  )
+}
 
 export default function App() {
   const [darkMode, setDarkMode] = useState(() => {
     const saved = localStorage.getItem('nairasave-theme')
+
     if (saved) return saved === 'dark'
+
     return window.matchMedia('(prefers-color-scheme: dark)').matches
   })
 
   useEffect(() => {
     const root = document.documentElement
+
     if (darkMode) {
       root.classList.add('dark')
       localStorage.setItem('nairasave-theme', 'dark')
@@ -30,29 +57,28 @@ export default function App() {
   }, [darkMode])
 
   return (
-    <>
-      <a
-        href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded-lg z-[100] font-semibold"
-      >
-        Skip to main content
-      </a>
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <LandingPage
+              darkMode={darkMode}
+              setDarkMode={setDarkMode}
+            />
+          }
+        />
 
-      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-
-      <main id="main-content">
-        <Hero />
-        <Trust />
-        <Features />
-        <Calculator />
-        <Dashboard />
-        <Benefits />
-        <HowItWorks />
-        <FAQ />
-        <Waitlist />
-      </main>
-
-      <Footer />
-    </>
+        <Route
+          path="/dashboard"
+          element={
+            <Dashboard 
+              darkMode={darkMode}
+              setDarkMode={setDarkMode}
+            />
+          }
+        />
+      </Routes>
+    </BrowserRouter>
   )
 }

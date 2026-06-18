@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import { getBarHeightPercent, formatNGN, formatUSD } from '../utils/projection'
+import { getBarHeightPercent, formatNGN, formatUSD } from '../../utils/projection'
 
 const MONTH_LABELS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 

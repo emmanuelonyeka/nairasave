@@ -1,17 +1,18 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { HiLightBulb, HiX } from 'react-icons/hi'
-import { useSavingsProjection } from '../hooks/useSavingsProjection'
-import ProjectionChart from '../dashboard/ProjectionChart'
-import ProjectionTable from '../dashboard/ProjectionTable'
-import SummaryCard from '../dashboard/SummaryCard'
-import FadeUp from '../components/FadeUp'
-import SectionLabel from '../components/SectionLabel'
+import { useSavingsProjection } from '../../hooks/useSavingsProjection'
+import ProjectionChart from './ProjectionChart'
+import ProjectionTable from './ProjectionTable'
+import SummaryCard from './SummaryCard'
+import FadeUp from '../../components/FadeUp'
+import SectionLabel from '../../components/SectionLabel'
+import { useNavigate } from 'react-router-dom'
 
 const QUICK_AMOUNTS = [50, 100, 200, 500, 1000]
 const TABS = ['Chart', 'Table']
 
-export default function Dashboard() {
+export default function Dashboard({ darkmode, setDarkMode}) {
   const [activeTab, setActiveTab] = useState('Chart')
   const {
     rawInput,
@@ -26,15 +27,21 @@ export default function Dashboard() {
   } = useSavingsProjection()
 
   const error = getErrorMessage()
+  const navigate = useNavigate()
 
   return (
-    <section
-      id="dashboard"
-      aria-labelledby="dashboard-heading"
-      className="py-16 lg:py-24 bg-gray-50 dark:bg-secondary-800"
+    <main
+        aria-labelledby="dashboard-heading"
+        className="min-h-screen  bg-gray-50 dark:bg-secondary-800"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
+        <button
+            onClick={() => navigate('/')}
+            className="mb-6 text-primary font-medium hover:underline"
+            >
+            ← Back to Home
+        </button>
         <FadeUp className="text-center mb-12">
           <SectionLabel>Savings Dashboard</SectionLabel>
           <h2
@@ -48,11 +55,11 @@ export default function Dashboard() {
             Enter your monthly USD savings amount and see exactly how your wealth grows over 12 months — in both dollars and Naira.
           </p>
         </FadeUp>
-
-        <div className="grid lg:grid-cols-5 gap-6 lg:gap-8 items-start">
+        
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8 items-start">
           {/* Left: Input panel */}
           <FadeUp className="lg:col-span-2">
-            <div className="bg-white dark:bg-secondary-800 border border-gray-100 dark:border-secondary-700 rounded-2xl p-6 sticky top-24">
+            <div className="bg-white dark:bg-secondary-800 border border-gray-100 dark:border-secondary-700 rounded-2xl p-6 lg:sticky lg:top-24">
               <h3 className="font-display font-bold text-secondary dark:text-white mb-1">
                 Monthly Savings
               </h3>
@@ -233,6 +240,7 @@ export default function Dashboard() {
                             activeMonth={activeMonth}
                             onHover={setActiveMonth}
                             onLeave={() => setActiveMonth(null)}
+                            className="overflow-x-auto"
                           />
                         </motion.div>
                       )}
@@ -264,6 +272,6 @@ export default function Dashboard() {
           </FadeUp>
         </div>
       </div>
-    </section>
+    </main>
   )
 }

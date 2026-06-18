@@ -1,6 +1,6 @@
-import FadeUp from '../components/FadeUp'
-import SectionLabel from '../components/SectionLabel'
-import { steps } from '../data'
+import FadeUp from '../../components/FadeUp'
+import SectionLabel from '../../components/SectionLabel'
+import { steps } from '../../data'
 
 export default function HowItWorks() {
   return (

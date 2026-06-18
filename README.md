@@ -1,232 +1,266 @@
 # NairaSave — Save in Dollars. Grow Beyond Inflation.
 
-> A production-quality fintech landing page and interactive savings dashboard, built for the NTTS Stage 2 Frontend Challenge by Team Guru.
+> A production-quality fintech landing page and interactive savings dashboard, built for the **NTTS** Stage 2 Frontend Challenge by Team Guru.
 
 ---
 
 ## 📌 Project Overview
 
-**NairaSave** is a Lagos-based fintech startup building a USD dollar-savings platform for Nigerians. This project is a single-page web application that combines:
+**NairaSave** is a Lagos-based fintech startup concept focused on helping Nigerians preserve wealth through **USD** savings.
 
-1. **A high-converting landing page** — communicating NairaSave's value proposition, trust signals, features, and a live currency calculator (Stage 1).
-2. **An interactive savings projection dashboard** — allowing users to enter a monthly USD savings target and see a full 12-month Naira/USD projection, complete with a custom-built bar chart and data table (Stage 2).
+The application is a modern React web experience combining:
 
-Built for the **Nigerian Tech Talent Spotlight (NTTS) Stage 2 Frontend Challenge**.
+1. **A conversion-focused fintech landing page**
+   Showcasing NairaSave's value proposition, trust signals, product benefits, **FAQ**, and a live currency calculator.
 
----
+2. **A dedicated interactive savings dashboard**
+   A separate dashboard experience where users can enter a monthly **USD** savings goal and visualize their 12-month savings projection in both **USD** and Nigerian Naira.
 
-## ✨ Features
-
-### Stage 1 (Retained & Improved)
-| Feature | Description |
-|---|---|
-| **Live Currency Calculator** | USD → NGN or NGN → USD instant conversion. Rate: 1 USD = ₦1,550. Direction-switchable. |
-| **Dark / Light Mode** | Full-site theme with `localStorage` persistence and system preference detection. |
-| **Hero Dashboard Card** | Custom React + Tailwind fintech dashboard card with SVG sparkline — zero external images. |
-| **FAQ Accordion** | Animated expand/collapse with full ARIA support. |
-| **Waitlist Form** | Email validation, loading state, and success animation. |
-| **Sticky Navbar** | Smooth anchor navigation, frosted glass on scroll, mobile hamburger menu. |
-
-### Stage 2 (New)
-| Feature | Description |
-|---|---|
-| **Savings Projection Dashboard** | Enter monthly USD → get 12-month projection in USD and NGN. Live, no button needed. |
-| **Custom Bar Chart** | Hand-built with React + Tailwind. Zero chart libraries. Animated bar growth on load. |
-| **Projection Table** | Month-by-month breakdown with highlighted final row and totals footer. |
-| **Summary Cards** | Monthly deposit, 12-month USD total, NGN value, and growth percentage. |
-| **Insight Panel** | Contextual financial insight generated dynamically from the user's input. |
-| **Tab Switcher** | Toggle between Chart view and Table view within the dashboard. |
-| **Full Edge Case Handling** | Zero, negative, blank, NaN, and values over $1M all handled gracefully — no crashes. |
+Built for the **Nigerian Tech Talent Spotlight (**NTTS**) Stage 2 Frontend Challenge**.
 
 ---
 
-## 🛠 Tech Stack
+# ✨ Features
 
-| Technology | Version | Role |
-|---|---|---|
-| [React](https://react.dev/) | 18 | UI framework |
-| [Vite](https://vitejs.dev/) | 5 | Build tool & dev server |
-| [Tailwind CSS](https://tailwindcss.com/) | 3 | Utility-first styling |
-| [Framer Motion](https://www.framer.com/motion/) | 11 | Animations & transitions |
-| [React Icons](https://react-icons.github.io/react-icons/) | 5 | Icon library |
-| JavaScript (ES2022) | — | No TypeScript |
+## Landing Page
 
-> **No external chart libraries were used.** The bar chart is built entirely with React components and Tailwind CSS utility classes, as required by the NTTS Stage 2 specification.
-
----
-
-## 📐 Dashboard Logic
-
-### Projection Formula
-```
-For each month (1–12):
-  Total USD Saved = monthlyAmount × month
-  Total NGN Value = Total USD Saved × 1550
-```
-
-### Edge Case Handling
-| Input | Behavior |
-|---|---|
-| Empty / blank | Shows "Enter an amount to see your projection" placeholder |
-| Zero (`0`) | Shows error: "Enter an amount greater than $0" |
-| Negative (`-10`) | Shows error: "Amount cannot be negative" |
-| Over $1,000,000 | Shows error: "Please enter an amount under $1,000,000" |
-| Decimal (`$50.50`) | Accepted, calculated correctly |
-| Very large valid (`$999,999`) | Calculated and displayed correctly |
+| Feature                             | Description                                                                                     |
+| ----------------------------------- | ----------------------------------------------------------------------------------------------- |
+| **Responsive Fintech Landing Page** | Modern single-page marketing experience optimized for desktop and mobile.                       |
+| **Live Currency Calculator**        | Convert USD ↔ NGN instantly using a configurable exchange rate.                                 |
+| **Dark / Light Mode**               | Full application theme switching with localStorage persistence and system preference detection. |
+| **Hero Dashboard Preview**          | Custom-built fintech dashboard card with SVG visualization.                                     |
+| **FAQ Accordion**                   | Animated expandable questions with accessibility support.                                       |
+| **Waitlist Form**                   | Email validation, loading state, and success feedback.                                          |
+| **Responsive Navbar**               | Sticky navigation with mobile menu and smooth section scrolling.                                |
 
 ---
 
-## 🚀 Running Locally
+# Stage 2 — Savings Dashboard
 
-### Prerequisites
+The dashboard was upgraded into a **separate application route** instead of remaining as a landing page section.
+
+Route:
+
+`/dashboard`
+
+Features:
+
+| Feature                          | Description                                                                             |
+| -------------------------------- | --------------------------------------------------------------------------------------- |
+| **Savings Projection Dashboard** | Users enter monthly USD savings and instantly receive a 12-month projection.            |
+| **Custom Projection Chart**      | Hand-built animated bar chart using React and Tailwind CSS. No chart libraries.         |
+| **Projection Table**             | Month-by-month USD and NGN savings breakdown.                                           |
+| **Summary Cards**                | Displays monthly savings, yearly USD total, NGN value, and growth information.          |
+| **Dynamic Insight Panel**        | Generates personalized savings insights based on user input.                            |
+| **Chart / Table Tabs**           | Users can switch between visual and tabular views.                                      |
+| **Input Validation**             | Handles empty values, negative numbers, zero values, decimals, NaN, and maximum limits. |
+| **Responsive Layout**            | Optimized dashboard experience across desktop, tablet, and mobile screens.              |
+
+---
+
+# 🛠 Tech Stack
+
+| Technology        | Role                                 |
+| ----------------- | ------------------------------------ |
+| React 18          | Component-based UI development       |
+| Vite 5            | Development server and build tooling |
+| Tailwind CSS 3    | Responsive styling system            |
+| React Router DOM  | Multi-page route navigation          |
+| Framer Motion 11  | Animations and transitions           |
+| React Icons       | UI icons                             |
+| JavaScript ES2022 | Application logic                    |
+
+> No external chart libraries were used. The dashboard visualization was created entirely with React components and Tailwind **CSS**.
+
+---
+
+# 📐 Dashboard Logic
+
+## Projection Formula
+
+````For each month (1 - 12):
+
+**USD** Saved: monthlyAmount × month
+
+**NGN** Value: **USD** Saved × exchangeRate ```
+
+Current exchange rate:
+
+``` 1 **USD** = ₦1,**550** ```
+
+---
+
+## Input Handling
+
+| Input              | Result                         |
+| ------------------ | ------------------------------ |
+| Empty input        | Displays dashboard placeholder |
+| `0`                | Shows validation message       |
+| Negative values    | Prevented with validation      |
+| Decimal values     | Supported                      |
+| Values above limit | Shows user-friendly error      |
+| Valid amount       | Generates complete projection  |
+
+---
+
+# 🌙 Theme System
+
+Dark mode is handled globally at application level.
+
+Features:
+
+- Shared state between landing page and dashboard
+- Persists user preference using localStorage
+- Detects operating system theme preference
+- Works across routes
+
+Implementation:
+
+``` App.jsx ├── darkMode state ├── Theme persistence └── Route sharing ```
+
+---
+
+# 🚦 Application Routing
+
+The application now uses route separation:
+
+``` / ### Landing Page
+
+/dashboard ### Savings Dashboard ```
+
+Structure:
+
+````
+
+BrowserRouter
+└── Routes
+├── LandingPage
+└── DashboardPage
+
+````
+
+The landing page contains:
+
+``` Navbar Hero Trust Features Calculator Benefits HowItWorks **FAQ** Waitlist Footer ```
+
+The dashboard is an independent page experience.
+
+---
+
+# 📁 Project Structure
+
+``` nairasave/ │ ├── src/ │ ├── components/ │   ├── Button.jsx │   ├── FadeUp.jsx │   └── SectionLabel.jsx │ ├── pages/ │ │   ├── Landingpage/ │   │   ├── Navbar.jsx │   │   ├── Hero.jsx │   │   ├── Trust.jsx │   │   ├── Features.jsx │   │   ├── Calculator.jsx │   │   ├── Benefits.jsx │   │   ├── HowItWorks.jsx │   │   ├── **FAQ**.jsx │   │   ├── Waitlist.jsx │   │   └── Footer.jsx │ │   └── Dashboard/ │       ├── DashboardPage.jsx │       ├── ProjectionChart.jsx │       ├── ProjectionTable.jsx │       └── SummaryCard.jsx │ ├── hooks/ │   └── useSavingsProjection.js │ ├── utils/ │   └── projection.js │ ├── data/ │   └── index.js │ ├── App.jsx ├── main.jsx └── index.css ```
+
+---
+
+# ♿ Accessibility
+
+Implemented:
+
+- Semantic **HTML** structure
+- Keyboard navigation support
+- **ARIA** labels
+- **ARIA** live regions
+- Accessible form states
+- Screen-reader friendly dashboard chart descriptions
+- Proper heading hierarchy
+- Responsive mobile navigation
+
+---
+
+# 🚀 Running Locally
+
+## Requirements
+
 - Node.js v18+
 - npm v9+
 
-### Steps
-```bash
-# Clone the repository
-git clone https://github.com/emmanuelonyeka/nairasave.git
+Install:
 
-# Navigate into the project
+```bash git clone [https://github.com/emmanuelonyeka/nairasave.git](https://github.com/emmanuelonyeka/nairasave.git)
+
 cd nairasave
 
-# Install dependencies
-npm install
+npm install ```
 
-# Start the dev server
-npm run dev
-```
+Run:
 
-Open **http://localhost:5173** in your browser.
+```bash npm run dev ```
 
-### Build for Production
-```bash
-npm run build
-```
+Open:
 
-Output goes into the `dist/` folder.
-
-### Preview Production Build
-```bash
-npm run preview
-```
+``` [http://localhost:**5173**](http://localhost:**5173**) ```
 
 ---
 
-## 📦 Deployment
+## Production Build
 
-### Netlify (Recommended)
-1. Push to GitHub
-2. Connect repo in Netlify dashboard
-3. Build command: `npm run build`
-4. Publish directory: `dist`
-5. Deploy
+```bash npm run build ```
 
-Netlify auto-deploys on every push to `main`.
+Preview:
 
-### Vercel
-```bash
-npm install -g vercel
-vercel --prod
-```
+```bash npm run preview ```
 
 ---
 
-## 📁 Project Structure
+# 📦 Deployment
 
-```
-nairasave/
-├── src/
-│   ├── components/          # Reusable UI primitives
-│   │   ├── Button.jsx
-│   │   ├── FadeUp.jsx
-│   │   └── SectionLabel.jsx
-│   ├── dashboard/           # Stage 2 dashboard components
-│   │   ├── ProjectionChart.jsx   # Custom bar chart (no libraries)
-│   │   ├── ProjectionTable.jsx   # Month-by-month data table
-│   │   └── SummaryCard.jsx       # Summary stat cards
-│   ├── hooks/               # Custom React hooks
-│   │   └── useSavingsProjection.js
-│   ├── sections/            # Page sections
-│   │   ├── Navbar.jsx
-│   │   ├── Hero.jsx
-│   │   ├── Trust.jsx
-│   │   ├── Features.jsx
-│   │   ├── Calculator.jsx
-│   │   ├── Dashboard.jsx    # Stage 2 dashboard section
-│   │   ├── Benefits.jsx
-│   │   ├── HowItWorks.jsx
-│   │   ├── FAQ.jsx
-│   │   ├── Waitlist.jsx
-│   │   └── Footer.jsx
-│   ├── data/
-│   │   └── index.js         # All content + constants (exchange rate)
-│   ├── utils/
-│   │   └── projection.js    # Projection math, formatters, insight generator
-│   ├── App.jsx
-│   ├── main.jsx
-│   └── index.css
-├── index.html
-├── vite.config.js
-├── tailwind.config.js
-├── postcss.config.js
-└── package.json
-```
+Recommended platforms:
+
+- Netlify
+- Vercel
+
+Build command:
+
+``` npm run build ```
+
+Output:
+
+``` dist/ ```
 
 ---
 
-## 🎨 Design System
+# 🎨 Design System
 
-| Token | Value | Usage |
-|---|---|---|
-| Primary | `#10B981` | CTAs, highlights, chart bars |
-| Secondary | `#0F172A` | Dark backgrounds, headings |
-| Accent | `#F59E0B` | Stars, secondary highlights |
-| Display font | Plus Jakarta Sans | Headings |
-| Body font | Inter | Body copy, UI labels |
-
----
-
-## ♿ Accessibility
-
-- Skip-to-content link
-- Full keyboard navigation
-- `aria-label`, `aria-expanded`, `aria-live`, `aria-describedby`, `aria-invalid` throughout
-- Proper heading hierarchy (h1 → h2 → h3)
-- Table with `scope`, `role`, and caption support
-- Chart bars have `role="img"` and `aria-label` with values
-- WCAG AA color contrast on all text
+| Token        | Value             |
+| ------------ | ----------------- |
+| Primary      | `#10B981`         |
+| Secondary    | `#0F172A`         |
+| Accent       | `#F59E0B`         |
+| Heading Font | Plus Jakarta Sans |
+| Body Font    | Inter             |
 
 ---
 
-## 🔮 Future Improvements
+# 🔮 Future Improvements
 
-- [ ] Interest rate toggle (add 3% / 5% annual interest to projections)
-- [ ] Export projection as PDF or CSV
-- [ ] Multiple savings goals (emergency fund, travel, investment)
-- [ ] Live exchange rate via API (CBN / parallel market feed)
-- [ ] Push notifications for savings milestones
-- [ ] User authentication and saved projections
-
----
-
-## 👥 Team Guru — NTTS Stage 2
-
-**Track:** Front End Web Development  
-**Stage:** 2 — Interactive Dashboard Extension  
-**Cohort:** NTTS 2025
-
-| Role | Name | GitHub |
-|---|---|---|
-| Team Lead / Integration | _______________ | @_______________ |
-| UI Lead | _______________ | @_______________ |
-| Logic & Dashboard Lead | _______________ | @_______________ |
-| _(add more as needed)_ | | |
+- Interest rate calculations
+- Savings goal categories
+- Export dashboard reports
+- Real-time exchange rate **API**
+- User authentication
+- Saved savings plans
+- Notification reminders
 
 ---
 
-## 📄 License
+# 👥 Team Guru — NTTS Stage 2
 
-Built as part of the **Nigerian Tech Talent Spotlight (NTTS) Stage 2 Frontend Challenge**.
+**Track:** Frontend Web Development **Stage:** Stage 2 — Interactive Dashboard Extension **Cohort:** **NTTS** **2025**
 
-© 2025 Team Guru · NairaSave. All rights reserved.
+| Role                    | Name       |
+| ----------------------- | ---------- |
+| Team Lead / Integration | Adaeze |
+| UI Lead                 |Ajayi Akinola |
+| Dashboard Lead          | Emmanuel Onyeka |
+| Additional Contributors | __________ |
+
+---
+
+# 📄 License
+
+Built for the **Nigerian Tech Talent Spotlight (**NTTS**) Stage 2 Frontend Challenge**.
+
+© **2025** Team Guru · NairaSave
+````

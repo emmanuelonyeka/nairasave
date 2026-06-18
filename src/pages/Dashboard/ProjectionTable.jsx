@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { formatNGN, formatUSD } from '../utils/projection'
+import { formatNGN, formatUSD } from '../../utils/projection'
 
 const MONTH_NAMES = [
   'January', 'February', 'March', 'April', 'May', 'June',

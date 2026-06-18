@@ -1,7 +1,7 @@
 import { HiShieldCheck, HiLockClosed, HiFlag, HiChartBar } from 'react-icons/hi'
-import FadeUp from '../components/FadeUp'
-import SectionLabel from '../components/SectionLabel'
-import { trustPoints } from '../data'
+import FadeUp from '../../components/FadeUp'
+import SectionLabel from '../../components/SectionLabel'
+import { trustPoints } from '../../data'
 
 const iconMap = {
   shield: HiShieldCheck,

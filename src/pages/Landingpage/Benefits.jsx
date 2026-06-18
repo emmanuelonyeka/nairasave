@@ -1,7 +1,7 @@
 import { HiShieldCheck, HiCurrencyDollar, HiGlobe, HiTrendingUp } from 'react-icons/hi'
-import FadeUp from '../components/FadeUp'
-import SectionLabel from '../components/SectionLabel'
-import { benefits } from '../data'
+import FadeUp from '../../components/FadeUp'
+import SectionLabel from '../../components/SectionLabel'
+import { benefits } from '../../data'
 
 const icons = [HiShieldCheck, HiCurrencyDollar, HiGlobe, HiTrendingUp]
 

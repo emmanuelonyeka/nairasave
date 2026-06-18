@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { HiArrowRight, HiCheckCircle } from 'react-icons/hi'
-import FadeUp from '../components/FadeUp'
-import Button from '../components/Button'
+import FadeUp from '../../components/FadeUp'
+import Button from '../../components/Button'
 
 export default function Waitlist() {
   const [email, setEmail] = useState('')
